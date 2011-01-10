@@ -1,0 +1,54 @@
+****NOTE*****
+This requires PyQt4. It has been tested with Python 2.6.
+
+==How to Run==
+*Server*
+    python server.py HOSTNAME PORT
+    e.g. python server.py localhost 8080
+    Quit the server with Ctrl+C
+
+*Client*
+    python client HOSTNAME PORT
+    e.g. python client.py localhost 8080
+
+==Possible Commands==
+1. connect
+2. addTask {TaskName}
+3. prioritize {TaskName} {Priority}
+4. prioritize {TaskName} {Priority}
+5. accept {TaskName}
+6. complete {TaskName} {CompletionPercent}
+
+==How to Remove Tasks==
+`rm tasks.db` to remove the task database
+
+==License Information==
+License information can be found in the About menu (under the Help menu)
+
+==Features==
+*GUI*
+    1. Cross Platform Graphics Toolkit (Qt works on Windows, Mac, Linux, mobile phones, etc)
+    2. Python works on just about any platform (Windows, Mac, Linux) and I haven't used any non-cross-platform modules
+    3. File/Help Menu (with accessible keys - Alt+F, Alt+H)
+    4. Menu item icons
+    5. Shortcut keys to menu actions - Ctrl+A for About, Ctrl+W for Quit
+    6. Resizable window and components
+    7. The command line has history! Press Up/Down to scroll through your commands!
+
+*Code*
+    1. Clear, concise Python with good amount of documention
+       ~300 lines of code, with 100 lines of comments. It's small, easy to understand, and commented well
+    2. A server capable of handling multiple clients
+    3. An efficient communication protocol (JSON strings)
+    4. Error handling sent to offending clients
+    5. Broadcasting to all clients when an action occurs
+    6. Separation of code and UI design - UI loaded from a file
+    7. Supports task names with an arbitrary number of spaces
+    8. Server saves task list between shutdowns
+
+==Improvements==
+*Code*
+    1. Currently, if you delete the tasks.db file while the server is executing, the next time someone
+       tries to do anything, you will get a DB error. I don't feel like I should fix it for this assignment,
+       since it is "undefined" behavior and anything can happen. In a future product, I would try/except
+       all my DB calls and recreate the database if I found it went missing.
