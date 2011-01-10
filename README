@@ -1,4 +1,4 @@
-****NOTE*****
+****NOTE****
 This requires PyQt4. It has been tested with Python 2.6.
 
 ==How to Run==
@@ -15,9 +15,8 @@ This requires PyQt4. It has been tested with Python 2.6.
 1. connect
 2. addTask {TaskName}
 3. prioritize {TaskName} {Priority}
-4. prioritize {TaskName} {Priority}
-5. accept {TaskName}
-6. complete {TaskName} {CompletionPercent}
+4. accept {TaskName}
+5. complete {TaskName} {CompletionPercent}
 
 ==How to Remove Tasks==
 `rm tasks.db` to remove the task database
